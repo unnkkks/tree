@@ -3,11 +3,13 @@
 
 struct Node{
     int data;
+
     Node* left;
     Node* right;
 };
 
 void Node_insert(Node* pnode, int num);
+void reading(FILE* database);
 void tree_print(Node* pnode);
 void tree_kill(Node* pnode);
 

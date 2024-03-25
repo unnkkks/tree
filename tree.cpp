@@ -46,11 +46,11 @@ void tree_print(Node* pnode)
     if (pnode->left != NULL)
         tree_print(pnode->left);
     else
-        printf("{0}");
+        printf("{*}");
     if (pnode->right != NULL)
         tree_print(pnode->right);
     else
-        printf("{0}");
+        printf("{*}");
     printf("}\n");
 
 }
@@ -63,6 +63,8 @@ void tree_kill(Node* pnode)
         tree_kill(pnode->left);
     if (pnode->right != NULL)
         tree_kill(pnode->right);
+    pnode->right = NULL;
+    pnode->left = NULL;
     free(pnode);
 }
 
