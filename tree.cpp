@@ -3,7 +3,7 @@
 #include <assert.h>
 #include "tree.h"
 
-void Node_insert(Node* pnode, int num)
+void node_insert(Node* pnode, int num)
 {   
     assert(pnode);
     Node* temp = (Node*) calloc(1, sizeof(Node));
@@ -37,6 +37,14 @@ void Node_insert(Node* pnode, int num)
     }
 }
 
+
+void node_insert_string(Node* pnode, char* start, char* end)
+{
+    Node* curr = (Node*) calloc(1, sizeof(Node));
+    curr->beg_of_string = start;
+    curr->end_of_string = end;
+    
+}
 
 
 void tree_print(Node* pnode)

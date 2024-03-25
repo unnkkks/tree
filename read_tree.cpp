@@ -25,7 +25,7 @@ void reading(FILE* database)
 
     if (buffer[cur_pos] == "{")
     {
-        tree->data 
+        
     }
 
 

@@ -2,13 +2,14 @@
 #define TREE_H
 
 struct Node{
-    int data;
+    char* beg_of_string;
+    char* end_of_string;
 
     Node* left;
     Node* right;
 };
 
-void Node_insert(Node* pnode, int num);
+void node_insert(Node* pnode, int num);
 void reading(FILE* database);
 void tree_print(Node* pnode);
 void tree_kill(Node* pnode);
